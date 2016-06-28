@@ -5,6 +5,7 @@ capybara-*.html
 .rspec
 .rvmrc
 /.bundle
+/.byebug_history
 /vendor/bundle
 /log/*
 /tmp/*
