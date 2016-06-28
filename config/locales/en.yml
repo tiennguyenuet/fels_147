@@ -1,4 +1,13 @@
 en:
+  category:
+    name: "Name of category"
+    desc: "Description"
+    allcate: "All Categories"
+    number_of_lesson: "Number of lesson"
+    lesson:
+      start: "Start"
+      create: "Create"
+      lesson_list: "Listing Lessons"
   relationship:
     unfollow: "Unfollow"
     follow: "Follow"
@@ -45,9 +54,6 @@ en:
         delete: "Delete"
         create: "Create"
         cancel: "Cancel"
-        reset: "Reset"
-        remove: "Remove"
-        save: "Save"
       confirm: "Are you sure?"
       header:
         title: "Admin Panel"
@@ -111,6 +117,7 @@ en:
         add:
           success: "You was successfully added !!!"
           danger: "Some thing went wrong !!! Please re check!"
+  category page:
     master:
       header:
         title: "Fr E-learning System"

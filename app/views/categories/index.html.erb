@@ -1,0 +1,24 @@
+<% provide :title, t("category.allcate") %>
+<hr>
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th><%= t "category.name" %></th>
+      <th><%= t "category.desc" %></th>
+      <th><%= t "category.number_of_lesson" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.description %></td>
+        <td><%= category.lessons.count %></td>
+        <td>
+          <%= link_to t("category.start"), category_path(category), class: "btn btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate %>

@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
+  resources :categories
   root "static_pages#home"
   get "about" => "static_pages#about"
   get "signup" => "users#new"
   namespace :admin do
     resources :users, except: [:create, :new, :show]
     resources :categories
-    resources :words
   end
+  resources :categories
+  resources :categories do
+    resources :lessons, except: [:index, :destroy, :edit]
+  end
+  resources :users
   resources :users do
     member do
       get "/:relationship_type",
@@ -14,6 +19,7 @@ Rails.application.routes.draw do
       as: "follow"
     end
   end
+  resources :lessons, except: [:edit, :destroy]
   get "sessions/new"
   get    "login" => "sessions#new"
   post   "login" => "sessions#create"
